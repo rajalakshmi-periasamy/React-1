@@ -17,10 +17,10 @@ class ProductTable extends React.Component {
   }
 
   fetchRelevantProducts() {
-    const searchText = this.props.filterValues.searchText;
+    const searchText = this.props.filterValues.searchText.toLowerCase();
     const showInStock = this.props.filterValues.showInStock;
     return (this.props.products.reduce((acc, elem) => {
-      if (elem.name.indexOf(searchText) !== -1 && (showInStock ? elem.stocked : true)) {
+      if ((elem.name.toLowerCase()).indexOf(searchText) !== -1 && (showInStock ? elem.stocked : true)) {
         acc.push(elem);
       }
       return acc;

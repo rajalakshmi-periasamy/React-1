@@ -7,7 +7,7 @@ import React from 'react';
 function ProductCategoryRow({ productCategory }) {
   return(
     <tr>
-      <td>{productCategory}</td>
+      <th colspan={2}>{productCategory}</th>
     </tr>
   )
 }

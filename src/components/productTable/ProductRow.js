@@ -8,7 +8,7 @@ import styles from '../FilterableProductTable.less'
 function ProductRow({ product }) {
   return(
     <tr>
-      <td className={!product.stocked && styles.redFont}>{product.name}</td>
+      <td className={product.stocked ? '' : styles.redFont}>{product.name}</td>
       <td>{product.price}</td>
     </tr>
   )
